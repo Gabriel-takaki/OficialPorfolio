@@ -209,7 +209,7 @@
          .conhecimentos {
              display: grid;
              grid-template-columns: repeat(16, 1fr);
-             grid-template-rows: repeat(6, 6rem);
+             grid-template-rows: repeat(7, 5rem);
              row-gap: .5rem;
          }
          
@@ -243,37 +243,40 @@
              grid-row: 5 / -1;
          }
          
-         .sessao-conhecimento {
-             background-color: rgb(184, 184, 184);
+         .sessao-conhecimentos {
+             background-color: rgb(214, 214, 214);
          }
          
          .sessao-header {
              display: flex;
              align-items: center;
              justify-content: center;
+             background-color: rgb(214, 214, 214);
          }
          
          .sessao-header h1 {
              font-family: serif;
              font-size: 3rem;
              color: rgb(59, 59, 59);
-             border-bottom: solid 3px rgb(53, 111, 119);
+             /*border-bottom: solid 3px rgb(48, 115, 124);*/
              margin-bottom: 1.5rem;
          }
          
          .conhecimento-header {
              align-items: center;
-             color: rgb(73, 73, 73);
+             color: rgb(0, 0, 0);
          }
          
          .conhecimento-header i {
              font-size: 2.5rem;
+             color: rgb(48, 115, 124);
          }
          
          .conhecimento-header h3 {
              font-family: serif;
              font-size: 2rem;
              padding-left: 1rem;
+             color: rgb(53, 111, 119);
          }
          
          .conhecimentos-text {
@@ -295,12 +298,25 @@
          .projetos {
              display: flex;
              justify-content: space-evenly;
+             background-color: #2d3135;
+             font-size: 200;
+         }
+         
+         .sessao-header1 h1 {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background-color: #2d3135;
+             font-size: 3rem;
+             border-bottom: #fff;
+             color: #fff;
          }
          
          .card {
              width: 18rem;
              height: 25rem;
              position: relative;
+             margin-top: 5rem;
          }
          
          .card-img-wrapper {
@@ -330,6 +346,10 @@
              transition: all .3s;
          }
          
+         .sessao-header {
+             color: rgb(80, 80, 80);
+         }
+         
          .card-info h2 {
              font-family: serif;
              font-size: 2rem;
@@ -347,7 +367,7 @@
          .card-info p {
              font-family: serif;
              color: rgb(0, 0, 0);
-             font-weight: 400;
+             font-weight: 500;
              width: 80%;
              margin-bottom: 2rem;
          }
@@ -364,6 +384,13 @@
              border-radius: .5rem;
              border: none;
              box-shadow: 0.1rem .8rem rgba(0, 0, 0, .4);
+             cursor: pointer;
+         }
+         
+         .card-info button:hover {
+             opacity: 0, 5;
+             color: black;
+             transition: 1s;
          }
          
          .card:hover .card-info {
@@ -374,4 +401,183 @@
          
          .card:hover .card-img-wrapper {
              opacity: 0.3;
+         }
+         
+         .sessao-contato {
+             border-bottom: 3rem;
+             width: 100%;
+             height: 100vh;
+             background-color: #2d3135;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+         
+         .contato-wrapper {
+             width: 80%;
+             height: 30rem;
+             display: flex;
+             box-shadow: 0 2rem 4rem rgba(0, 0, 0, .5);
+         }
+         
+         .contato-left {
+             width: 30%;
+             background: url(imagens/contato.jpg);
+             background-size: cover;
+         }
+         
+         .contato-right {
+             width: 70%;
+             background-color: rgb(253, 253, 253);
+             padding: 1rem 3rem 3rem 3rem;
+         }
+         
+         .sessao-contato h1 {
+             width: 100%;
+             text-align: center;
+             font-family: serif;
+             color: cadetblue;
+             font-size: 3rem;
+             font-weight: lighter;
+         }
+         
+         .sessao-contato form {
+             width: 100%;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         
+         .input-group {
+             position: relative;
+         }
+         
+         .field {
+             background: transparent;
+             border: none;
+             width: 20rem;
+             font-size: 1.5rem;
+             font-family: serif;
+             border-bottom: 2px dashed grey;
+             height: 3rem;
+             outline: none;
+             margin: 1rem 0;
+         }
+         
+         input-group textarea {
+             padding-top: 1rem;
+             max-width: 30rem;
+             max-height: 5rem;
+         }
+         
+         .field-label {
+             position: absolute;
+             left: 0;
+             top: 2rem;
+             font-size: 1.2rem;
+             font-family: 'Times New Roman', Times, serif;
+             text-transform: uppercase;
+             transition: all 0.3s;
+         }
+         
+         .field:focus~label {
+             top: 0;
+             font-size: 1rem;
+         }
+         
+         .btn-submit {
+             width: 80%;
+             height: 2.5rem;
+             background: #2C3E50;
+             background: -webkit-linear-gradient(to left, #4CA1AF, #2C3E50);
+             background: linear-gradient(to left, #4CA1AF, #2C3E50);
+             font-family: serif;
+             font-size: 1.5rem;
+             color: rgb(255, 255, 255);
+             border-radius: .5rem;
+             border: none;
+             box-shadow: 0.1rem 0.2rem rgba(0, 0, 0, .4);
+             cursor: pointer;
+         }
+         
+         .btn-submit:hover {
+             opacity: 0, 5;
+             color: black;
+             transition: 1s;
+         }
+         
+         .sessao-orcamento {
+             width: 100%;
+             height: 100vh;
+             background: url("./imagens//bg-orçamentos.jpg");
+             object-fit: cover;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+         
+         .orcamento-wrapper {
+             width: 50%;
+             height: 60%;
+             background-color: #cccccc99;
+             border-radius: 10px;
+             box-shadow: 0 0.1rem 0.3rem rgba( 0, 0, 0, 0.8);
+             position: relative;
+         }
+         
+         .sessao-orcamento h1 {
+             position: absolute;
+             top: -2.5rem;
+             left: 2rem;
+             background: #2C3E50;
+             background: -webkit-linear-gradient(to left, #4CA1AF, #2C3E50);
+             background: linear-gradient(to left, #4CA1AF, #2C3E50);
+             padding: 0 3rem;
+             color: #ffff;
+             font-family: "Baloo Da 2";
+             font-size: 3rem;
+             font-weight: lighter;
+             box-shadow: 0 0.1rem 0.3rem rgba( 0, 0, 0, 0.8);
+             border-radius: 10px;
+         }
+         
+         .sessao-orcamento form {
+             margin: 4rem;
+             display: grid;
+             grid-template-columns: auto 1fr;
+             column-gap: 2rem;
+             row-gap: 2rem;
+         }
+         
+         .sessao-orcamento label {
+             font-family: serif;
+             font-size: 1.5rem;
+             font-weight: bold;
+         }
+         
+         .sessao-orcamento input[type="number"] {
+             font-family: "Baloo Da 2";
+             width: 4rem;
+             font-size: 2rem;
+             outline: none;
+             border-radius: 10px;
+             border: none;
+             padding-top: 0.3rem;
+         }
+         
+         .btn-orcamento {
+             width: 80%;
+             height: 2.5rem;
+             background: #2C3E50;
+             background: -webkit-linear-gradient(to left, #4CA1AF, #2C3E50);
+             background: linear-gradient(to left, #4CA1AF, #2C3E50);
+             font-family: serif;
+             font-size: 1.5rem;
+             color: rgb(255, 255, 255);
+             border-radius: .5rem;
+             border: none;
+             box-shadow: 0.1rem 0.2rem rgba(0, 0, 0, .4);
+             cursor: pointer;
+             padding: 1rem;
+             grid-column: 2;
          }
